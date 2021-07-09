@@ -1,0 +1,125 @@
+version: "3.5"
+
+networks:
+  front-network:
+    driver: bridge
+    attachable: false
+  back-network:
+    driver: bridge
+    attachable: false
+
+#    attachable: true
+
+services:
+
+  nginx:
+ #   depends_on:
+  #    - mysql
+ #     - wordpress
+    build: "./services/nginx"
+    image: nginx:mytag
+    networks:
+      - front-network
+    restart: "no"
+   # environment:
+    #  - NGINX_HOST=foobar.com
+     # - NGINX_PORT=443
+    ports:
+       - "80:80"
+       - "443:443"
+    expose:
+      - 9000
+    volumes:
+      - "/home/user42/data/html/index.html:/var/www/myserver/index.html:rw"
+    #  mysql:
+#    build: "./services/mariadb"
+#    image: mariadb:mytag
+#    volumes:
+#      - /home/user42/data/mysql:/var/lib/mysql:rw
+#    restart: "no"
+#    expose:
+#      - "3306"
+#    environment:
+#      MYSQL_ROOT_PASSWORD: somewordpress
+#      MYSQL_DATABASE: mariadb
+#      MYSQL_USER: wordpress
+#      MYSQL_PASSWORD: wordpress
+#    networks:
+#      - back-network
+#
+  wordpress:
+    build: "./services/wordpress"
+    image: wordpress:mytag
+    volumes:
+      - "/home/user42/data/html:/var/www/html:rw"
+    restart: unless-stopped
+    expose:
+      - 3306
+      - 9000
+    environment:
+      WORDPRESS_DB_HOST: mariadb:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+     - front-network
+     - back-network
+
+
+    #env_file: .env-local
+
+#registry:
+#  restart: always
+#  image: registry:2
+#  name: "test"
+#  ports:
+#    - 443:443
+#  environment:
+#    REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
+#    REGISTRY_HTTP_TLS_KEY: /certs/domain.key
+#    REGISTRY_AUTH: htpasswd
+#    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
+#    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
+    #
+    #
+    #
+    #
+    #
+    #
+    #
+#Usage:
+#docker-compose [-f <arg>...] [--profile <name>...] [options] [COMMAND] [ARGS...]
+#docker-compose -h|--help
+
+#Options:
+#  -f, --file FILE             Specify an alternate compose file
+#                              (default: docker-compose.yml)
+#  -p, --project-name NAME     Specify an alternate project name
+#                              (default: directory name)
+#Commands:
+#  build              Build or rebuild services
+#  bundle             Generate a Docker bundle from the Compose file
+#  config             Validate and view the Compose file
+#  create             Create services
+#  down               Stop and remove containers, networks, images, and volumes
+#  events             Receive real time events from containers
+#  exec               Execute a command in a running container
+#  help               Get help on a command
+#  images             List images
+#  kill               Kill containers
+#  logs               View output from containers
+#  pause              Pause services
+#  port               Print the public port for a port binding
+#  ps                 List containers
+#  pull               Pull service images
+#  push               Push service images
+#  restart            Restart services
+#  rm                 Remove stopped containers
+#  run                Run a one-off command
+#  scale              Set number of containers for a service
+#  start              Start services
+#  stop               Stop services
+#  top                Display the running processes
+#  unpause            Unpause services
+#  up                 Create and start containers
+#  version            Show the Docker-Compose version information
