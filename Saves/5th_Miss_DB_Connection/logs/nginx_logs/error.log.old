@@ -1,0 +1,14 @@
+2021/07/17 14:36:17 [emerg] 1#1: host not found in upstream "wordpress-php" in /etc/nginx/conf.d/myserver.conf:30
+2021/07/17 14:36:20 [emerg] 1#1: host not found in upstream "wordpress-php" in /etc/nginx/conf.d/myserver.conf:30
+2021/07/17 14:36:22 [emerg] 1#1: host not found in upstream "wordpress-php" in /etc/nginx/conf.d/myserver.conf:30
+2021/07/17 14:36:23 [emerg] 1#1: host not found in upstream "wordpress-php" in /etc/nginx/conf.d/myserver.conf:30
+2021/07/17 16:40:38 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:40 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:41 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:42 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:43 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:45 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:49 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:40:56 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:41:09 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
+2021/07/17 16:41:35 [emerg] 1#1: unknown directive "acces_log" in /etc/nginx/conf.d/myserver.conf:25
