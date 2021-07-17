@@ -6,7 +6,7 @@ service mysql start
 echo "Creating WP database, user, and managing privileges..."
 echo "CREATE DATABASE $MYSQL_DATABASE DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;" | mysql -u root
 echo "CREATE USER '$MYSQL_USER'@'localhost' IDENTIFIED by '$MYSQL_USER_PASSWORD';" | mysql -u root
-echo "GRANT ALL PRIVILEGES ON $MYSQL_DATABASE.* TO '$MYSQL_USER'@'localhost' WITH GRANT OPTION;" | mysql -u root
+echo "GRANT ALL PRIVILEGES ON WordpressDB.* TO 'yotillar'@'localhost' WITH GRANT OPTION;" | mysql -u root
 echo "GRANT SHUTDOWN ON *.* TO 'root'@'localhost';" | mysql -u root
 echo "GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;" | mysql -u root
 #echo "update mysql.user set plugin='mysql_native_password' where user='root';" | mysql -u root

@@ -32,8 +32,7 @@ RUN mkdir -p /var/lib/mysql;\
 EXPOSE 3306
 COPY ./start.sh .
 RUN ["chmod", "+x", "./start.sh"]
-CMD ["./start.sh"]
-#CMD bash
-
+#CMD bash ./start.sh
 #CMD ["service", "mysql", "start"]
+CMD ["./start.sh"]
 #ENTRYPOINT ["mysqld_safe", "--user=mysql"]

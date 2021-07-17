@@ -1,0 +1,82 @@
+[17-Jul-2021 02:00:01] NOTICE: fpm is running, pid 1
+[17-Jul-2021 02:00:01] NOTICE: ready to handle connections
+[17-Jul-2021 02:00:01] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 02:34:30] NOTICE: Terminating ...
+[17-Jul-2021 02:34:30] NOTICE: exiting, bye-bye!
+[17-Jul-2021 13:38:48] NOTICE: fpm is running, pid 1
+[17-Jul-2021 13:38:48] NOTICE: ready to handle connections
+[17-Jul-2021 13:38:48] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 14:26:10] NOTICE: fpm is running, pid 1
+[17-Jul-2021 14:26:10] NOTICE: ready to handle connections
+[17-Jul-2021 14:26:10] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 14:36:13] ERROR: getaddrinfo: Temporary failure in name resolution
+
+[17-Jul-2021 14:36:13] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:16] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:16] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:19] ERROR: getaddrinfo: Temporary failure in name resolution
+
+[17-Jul-2021 14:36:19] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:21] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:21] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:23] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:23] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:25] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:25] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:29] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:29] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:36] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:36] ERROR: FPM initialization failed
+[17-Jul-2021 14:36:49] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:36:49] ERROR: FPM initialization failed
+[17-Jul-2021 14:37:15] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:37:15] ERROR: FPM initialization failed
+[17-Jul-2021 14:38:07] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:38:07] ERROR: FPM initialization failed
+[17-Jul-2021 14:39:07] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:39:07] ERROR: FPM initialization failed
+[17-Jul-2021 14:40:09] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:40:09] ERROR: FPM initialization failed
+[17-Jul-2021 14:41:10] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:41:10] ERROR: FPM initialization failed
+[17-Jul-2021 14:42:10] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:42:10] ERROR: FPM initialization failed
+[17-Jul-2021 14:43:11] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:43:11] ERROR: FPM initialization failed
+[17-Jul-2021 14:44:11] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:44:11] ERROR: FPM initialization failed
+[17-Jul-2021 14:45:12] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:45:12] ERROR: FPM initialization failed
+[17-Jul-2021 14:46:12] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:46:12] ERROR: FPM initialization failed
+[17-Jul-2021 14:47:13] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:47:13] ERROR: FPM initialization failed
+[17-Jul-2021 14:48:13] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:48:13] ERROR: FPM initialization failed
+[17-Jul-2021 14:49:14] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:49:14] ERROR: FPM initialization failed
+[17-Jul-2021 14:50:14] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:50:14] ERROR: FPM initialization failed
+[17-Jul-2021 14:51:15] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:51:15] ERROR: FPM initialization failed
+[17-Jul-2021 14:52:15] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:52:15] ERROR: FPM initialization failed
+[17-Jul-2021 14:53:16] ERROR: unable to bind listening socket for address 'nginx:9000': Cannot assign requested address (99)
+[17-Jul-2021 14:53:16] ERROR: FPM initialization failed
+[17-Jul-2021 16:40:37] NOTICE: fpm is running, pid 1
+[17-Jul-2021 16:40:37] NOTICE: ready to handle connections
+[17-Jul-2021 16:40:37] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 16:45:00] NOTICE: fpm is running, pid 1
+[17-Jul-2021 16:45:00] NOTICE: ready to handle connections
+[17-Jul-2021 16:45:00] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 17:00:45] NOTICE: fpm is running, pid 1
+[17-Jul-2021 17:00:45] NOTICE: ready to handle connections
+[17-Jul-2021 17:00:45] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 20:16:04] NOTICE: fpm is running, pid 1
+[17-Jul-2021 20:16:04] NOTICE: ready to handle connections
+[17-Jul-2021 20:16:04] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 20:21:02] NOTICE: fpm is running, pid 1
+[17-Jul-2021 20:21:02] NOTICE: ready to handle connections
+[17-Jul-2021 20:21:02] NOTICE: systemd monitor interval set to 10000ms
+[17-Jul-2021 20:22:25] NOTICE: Terminating ...
+[17-Jul-2021 20:22:25] NOTICE: exiting, bye-bye!

@@ -1,28 +1,32 @@
 version: "3.5"
 
-#networks:
- # front-network:
-  #  driver: bridge
-   # attachable: false
- # back-network:
-  #  driver: bridge
-   # attachable: false
+networks:
+  front-network:
+    driver: bridge
+    attachable: false
+  back-network:
+    driver: bridge
+    attachable: false
 
+volumes:
+  mdb-data:
+  wordpress:
 #    attachable: true
 
 services:
+
   nginx:
     depends_on:
       - wordpress-php
     build: "./services/nginx"
     image: nginx:mytag
-    #restart: never
     volumes:
+      - wordpress:/var/www/myserver/wordpress:rw
       - "./services/nginx/conf.d/myserver.conf:/etc/nginx/conf.d/myserver.conf:rw"
-      - "/home/user42/data/public:/var/www/myserver:rw"
-      - "/home/user42/data/nginx_logs:/var/log/nginx:rw"
-   # networks:
-    #  - front-network
+      - "./services/nginx/index.html:/var/www/myserver/index.html:rw"
+      - "./services/nginx/info.php:/var/www/myserver/info.php:rw"
+      - "/home/user42/_Code/On_Work/Inception/WorkDir/logs/nginx_logs:/var/log/nginx:rw"
+    restart: on-failure
    # environment:
     #  - NGINX_HOST=foobar.com
      # - NGINX_PORT=443
@@ -31,8 +35,13 @@ services:
       - "443:443"
     expose:
       - 9000
-    links:
-      - wordpress-php
+    networks:
+      - front-network
+      - back-network
+  #  links:
+   #   - wordpress-php
+
+
 
   wordpress-php:
     depends_on:
@@ -41,70 +50,56 @@ services:
     build: "./services/wordpress"
     image: wordpress-php:mytag
     volumes:
-      - "/home/user42/data/public:/var/www/php:rw"
-  # restart: never
+      - wordpress:/var/www/myserver/wordpress:rw
+      - "/home/user42/_Code/On_Work/Inception/WorkDir/logs/php-fpm_logs/php7.3-fpm.log:/var/log/php7.3-fpm.log:rw"
+      #- "/home/user42/_Code/On_Work/Inception/WorkDir/data/public:/var/www/php:rw"
+    restart: on-failure
+    environment:
+      - WORDPRESS_DB_HOST=mariadb:3306
+      - WORDPRESS_DB_USER=yotillar
+      - WORDPRESS_DB_PASSWORD=yotillar
+      - WORDPRESS_DB_NAME=WordpressDB
+      - NGINX_SERVER=nginx:9000
+    #links:
+     # - mariadb
     expose:
       - 3306
       - 9000
-    environment:
-      WORDPRESS_DB_HOST: mariadb:3306
-      WORDPRESS_DB_USER: yotillar
-      WORDPRESS_DB_PASSWORD: yotillar
-      WORDPRESS_DB_NAME: WordpressDB
-      NGINX_SERVER: nginx:9000
-    links:
-      - mariadb
-   # networks:
-    # - front-network
-     #- back-network
+    networks:
+      - front-network
+      - back-network
+
 
   mariadb:
     build: "./services/mariadb"
-  #  restart: never
+    image: mariadb:mytag
+    volumes:
+      - mdb-data:/var/lib/mysql:rw
+      - "../logs/mariadb_logs/error.log:/var/log/mysql/error.log"
+     # - "/home/user42/_Code/On_Work/Inception/WorkDir/data/mdb-data:/var/lib/mysql:rw"
+    restart: on-failure
     environment:
       - MYSQL_DATABASE=WordpressDB
       - MYSQL_USER=yotillar
       - MYSQL_USER_PASSWORD=yotillar
       - MYSQL_ROOT_PASSWORd=root
-  #  volumes:
-  #    - "/home/user42/data/mdb-data:/var/lib/mysql:rw"
-    image: mariadb:mytag
     expose:
       - 3306
-#    networks:
- #     - back-network
-
-#  volumes:
-#    -mdb-data
-    #env_file: .env-local
+    networks:
+      - back-network
+    #command: ["./start.sh"]
 
 
-
+   #env_file: .env-local
+# add secrets for pw!
 
 
 
 
 
 
-#registry:
-#  restart: always
-#  image: registry:2
-#  name: "test"
-#  ports:
-#    - 443:443
-#  environment:
-#    REGISTRY_HTTP_TLS_CERTIFICATE: /certs/domain.crt
-#    REGISTRY_HTTP_TLS_KEY: /certs/domain.key
-#    REGISTRY_AUTH: htpasswd
-#    REGISTRY_AUTH_HTPASSWD_PATH: /auth/htpasswd
-#    REGISTRY_AUTH_HTPASSWD_REALM: Registry Realm
-    #
-    #
-    #
-    #
-    #
-    #
-    #
+
+
 #Usage:
 #docker-compose [-f <arg>...] [--profile <name>...] [options] [COMMAND] [ARGS...]
 #docker-compose -h|--help
