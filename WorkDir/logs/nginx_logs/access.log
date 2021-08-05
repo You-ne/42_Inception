@@ -1,0 +1,2 @@
+172.19.0.1 - - [25/Jul/2021:00:09:09 +0000] "GET / HTTP/1.1" 301 185 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"
+192.168.144.1 - - [27/Jul/2021:02:17:48 +0000] "GET /wp-admin/install.php HTTP/1.1" 301 185 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0"

@@ -1,0 +1,84 @@
+[24-Jul-2021 17:51:24] NOTICE: fpm is running, pid 1
+[24-Jul-2021 17:51:24] NOTICE: ready to handle connections
+[24-Jul-2021 17:51:24] NOTICE: systemd monitor interval set to 10000ms
+[24-Jul-2021 17:57:19] NOTICE: fpm is running, pid 1
+[24-Jul-2021 17:57:19] NOTICE: ready to handle connections
+[24-Jul-2021 17:57:19] NOTICE: systemd monitor interval set to 10000ms
+[24-Jul-2021 18:05:06] NOTICE: Terminating ...
+[24-Jul-2021 18:05:06] NOTICE: exiting, bye-bye!
+[24-Jul-2021 18:08:19] NOTICE: fpm is running, pid 1
+[24-Jul-2021 18:08:20] NOTICE: ready to handle connections
+[24-Jul-2021 18:08:20] NOTICE: systemd monitor interval set to 10000ms
+[24-Jul-2021 18:12:09] NOTICE: Terminating ...
+[24-Jul-2021 18:12:09] NOTICE: exiting, bye-bye!
+[24-Jul-2021 18:15:05] NOTICE: fpm is running, pid 1
+[24-Jul-2021 18:15:05] NOTICE: ready to handle connections
+[24-Jul-2021 18:15:05] NOTICE: systemd monitor interval set to 10000ms
+[24-Jul-2021 18:17:49] NOTICE: Terminating ...
+[24-Jul-2021 18:17:49] NOTICE: exiting, bye-bye!
+[24-Jul-2021 18:22:10] NOTICE: fpm is running, pid 1
+[24-Jul-2021 18:22:10] NOTICE: ready to handle connections
+[24-Jul-2021 18:22:10] NOTICE: systemd monitor interval set to 10000ms
+[24-Jul-2021 18:23:06] NOTICE: Terminating ...
+[24-Jul-2021 18:23:06] NOTICE: exiting, bye-bye!
+[24-Jul-2021 18:26:51] ERROR: invalid port value '*'
+[24-Jul-2021 18:26:51] ERROR: FPM initialization failed
+[24-Jul-2021 18:26:54] ERROR: invalid port value '*'
+[24-Jul-2021 18:26:54] ERROR: FPM initialization failed
+[24-Jul-2021 18:26:55] ERROR: invalid port value '*'
+[24-Jul-2021 18:26:55] ERROR: FPM initialization failed
+[24-Jul-2021 18:26:56] ERROR: invalid port value '*'
+[24-Jul-2021 18:26:56] ERROR: FPM initialization failed
+[24-Jul-2021 18:26:58] ERROR: invalid port value '*'
+[24-Jul-2021 18:26:58] ERROR: FPM initialization failed
+[24-Jul-2021 18:27:00] ERROR: invalid port value '*'
+[24-Jul-2021 18:27:00] ERROR: FPM initialization failed
+[24-Jul-2021 18:27:04] ERROR: invalid port value '*'
+[24-Jul-2021 18:27:04] ERROR: FPM initialization failed
+[24-Jul-2021 18:27:11] ERROR: invalid port value '*'
+[24-Jul-2021 18:27:11] ERROR: FPM initialization failed
+[24-Jul-2021 18:27:24] ERROR: invalid port value '*'
+[24-Jul-2021 18:27:24] ERROR: FPM initialization failed
+[24-Jul-2021 18:27:50] ERROR: invalid port value '*'
+[24-Jul-2021 18:27:50] ERROR: FPM initialization failed
+[24-Jul-2021 18:28:42] ERROR: invalid port value '*'
+[24-Jul-2021 18:28:42] ERROR: FPM initialization failed
+[24-Jul-2021 18:29:42] ERROR: invalid port value '*'
+[24-Jul-2021 18:29:42] ERROR: FPM initialization failed
+[24-Jul-2021 18:30:43] ERROR: invalid port value '*'
+[24-Jul-2021 18:30:43] ERROR: FPM initialization failed
+[24-Jul-2021 18:31:43] ERROR: invalid port value '*'
+[24-Jul-2021 18:31:43] ERROR: FPM initialization failed
+[24-Jul-2021 18:32:44] ERROR: invalid port value '*'
+[24-Jul-2021 18:32:44] ERROR: FPM initialization failed
+[24-Jul-2021 18:33:44] ERROR: invalid port value '*'
+[24-Jul-2021 18:33:44] ERROR: FPM initialization failed
+[24-Jul-2021 18:34:44] ERROR: invalid port value '*'
+[24-Jul-2021 18:34:44] ERROR: FPM initialization failed
+[24-Jul-2021 18:35:45] ERROR: invalid port value '*'
+[24-Jul-2021 18:35:45] ERROR: FPM initialization failed
+[24-Jul-2021 18:36:45] ERROR: invalid port value '*'
+[24-Jul-2021 18:36:45] ERROR: FPM initialization failed
+[24-Jul-2021 18:37:46] ERROR: invalid port value '*'
+[24-Jul-2021 18:37:46] ERROR: FPM initialization failed
+[24-Jul-2021 18:38:46] ERROR: invalid port value '*'
+[24-Jul-2021 18:38:46] ERROR: FPM initialization failed
+[24-Jul-2021 18:39:46] ERROR: invalid port value '*'
+[24-Jul-2021 18:39:46] ERROR: FPM initialization failed
+[24-Jul-2021 18:40:47] ERROR: invalid port value '*'
+[24-Jul-2021 18:40:47] ERROR: FPM initialization failed
+[24-Jul-2021 18:41:47] ERROR: invalid port value '*'
+[24-Jul-2021 18:41:47] ERROR: FPM initialization failed
+[24-Jul-2021 18:42:47] ERROR: invalid port value '*'
+[24-Jul-2021 18:42:47] ERROR: FPM initialization failed
+[24-Jul-2021 18:43:48] ERROR: invalid port value '*'
+[24-Jul-2021 18:43:48] ERROR: FPM initialization failed
+[24-Jul-2021 18:44:48] ERROR: invalid port value '*'
+[24-Jul-2021 18:44:48] ERROR: FPM initialization failed
+[24-Jul-2021 18:45:49] ERROR: invalid port value '*'
+[24-Jul-2021 18:45:49] ERROR: FPM initialization failed
+[24-Jul-2021 18:54:19] NOTICE: fpm is running, pid 1
+[24-Jul-2021 18:54:19] NOTICE: ready to handle connections
+[24-Jul-2021 18:54:19] NOTICE: systemd monitor interval set to 10000ms
+[25-Jul-2021 00:02:49] NOTICE: Terminating ...
+[25-Jul-2021 00:02:49] NOTICE: exiting, bye-bye!

@@ -1,0 +1,138 @@
+version: "3.5"
+
+networks:
+  front-network:
+    driver: bridge
+    attachable: false
+  back-network:
+    driver: bridge
+    attachable: false
+
+volumes:
+  mdb-data:
+  wordpress:
+#    attachable: true
+
+services:
+
+  nginx:
+    depends_on:
+      - wordpress-php
+    build: "./services/nginx"
+    image: nginx:mytag
+    volumes:
+      - wordpress:/var/www/myserver/wordpress:rw
+      - "./services/nginx/index.html:/var/www/myserver/index.html:rw"
+      - "./services/nginx/info.php:/var/www/myserver/info.php:rw"
+      - "../logs/nginx_logs:/var/log/nginx:rw"
+     # - "./services/nginx/conf.d/myserver.conf:/etc/nginx/conf.d/myserver.conf:rw"
+    restart: on-failure
+   # environment:
+    #  - NGINX_HOST=foobar.com
+     # - NGINX_PORT=443
+    ports:
+      - "80:80"
+      - "443:443"
+    expose:
+      - 9000
+    networks:
+      - front-network
+    #  - back-network
+    links:
+      - wordpress-php
+
+
+
+  wordpress-php:
+    depends_on:
+      - mariadb
+   #     condition: service_healthy
+    build: "./services/wordpress"
+    image: wordpress-php:mytag
+    volumes:
+      - wordpress:/var/www/myserver/wordpress:rw
+      - "/home/user42/_Code/On_Work/Inception/WorkDir/logs/php-fpm_logs/php7.3-fpm.log:/var/log/php7.3-fpm.log:rw"
+      #- "/home/user42/_Code/On_Work/Inception/WorkDir/data/public:/var/www/php:rw"
+    restart: on-failure
+    environment:
+      - WORDPRESS_DB_HOST=mariadb:3306
+      - WORDPRESS_DB_USER=yotillar
+      - WORDPRESS_DB_PASSWORD=yotillar
+      - WORDPRESS_DB_NAME=WordpressDB
+      - NGINX_SERVER=nginx:9000
+    links:
+      - mariadb
+    expose:
+      - 3306
+      - 9000
+    networks:
+      - front-network
+      - back-network
+
+
+  mariadb:
+    build: "./services/mariadb"
+    image: mariadb:mytag
+    volumes:
+      - mdb-data:/var/lib/mysql:rw
+      - "../logs/mariadb_logs/error.log:/var/log/mysql/error.log"
+     # - "/home/user42/_Code/On_Work/Inception/WorkDir/data/mdb-data:/var/lib/mysql:rw"
+    restart: on-failure
+    environment:
+      - MYSQL_DATABASE=WordpressDB
+      - MYSQL_USER=yotillar
+      - MYSQL_USER_PASSWORD=yotillar
+      - MYSQL_ROOT_PASSWORd=root
+    expose:
+      - 3306
+    networks:
+      - back-network
+    #command: ["./start.sh"]
+
+
+   #env_file: .env-local
+# add secrets for pw!
+
+
+
+
+
+
+
+
+#Usage:
+#docker-compose [-f <arg>...] [--profile <name>...] [options] [COMMAND] [ARGS...]
+#docker-compose -h|--help
+
+#Options:
+#  -f, --file FILE             Specify an alternate compose file
+#                              (default: docker-compose.yml)
+#  -p, --project-name NAME     Specify an alternate project name
+#                              (default: directory name)
+#Commands:
+#  build              Build or rebuild services
+#  bundle             Generate a Docker bundle from the Compose file
+#  config             Validate and view the Compose file
+#  create             Create services
+#  down               Stop and remove containers, networks, images, and volumes
+#  events             Receive real time events from containers
+#  exec               Execute a command in a running container
+#  help               Get help on a command
+#  images             List images
+#  kill               Kill containers
+#  logs               View output from containers
+#  pause              Pause services
+#  port               Print the public port for a port binding
+#  ps                 List containers
+#  pull               Pull service images
+#  push               Push service images
+#  restart            Restart services
+#  rm                 Remove stopped containers
+#  run                Run a one-off command
+#  scale              Set number of containers for a service
+#  start              Start services
+#  stop               Stop services
+#  top                Display the running processes
+#  unpause            Unpause services
+#  up                 Create and start containers
+#  version            Show the Docker-Compose version information
